@@ -1,0 +1,72 @@
+<div class="">
+  <div class="transaction-container">
+    <div class="elements-container">
+      <div
+        class="stepper-container"
+        [ngClass]="{ fixStepper: selectedGateway === 'visaCard' }"
+        [ngClass]="{ fixSuccessStepper: openStep3 }"
+      >
+        <div class="stepper-head">
+          <span
+            class="step-number-1"
+            [ngClass]="{
+              number1: number1,
+              'number-large': number_1_Large
+            }"
+          >
+          </span>
+          <span
+            class="step-connector connector1"
+            [ngClass]="{ connector1: connector1 }"
+          ></span>
+          <span
+            class="step-number-2 number2"
+            [ngClass]="{
+              number2: number2,
+              'number-large': number_2_Large
+            }"
+          ></span>
+          <span
+            class="step-connector connector2"
+            [ngClass]="{ connector2: connector2 }"
+          ></span>
+          <span
+            class="step-number-3 number3"
+            [ngClass]="{
+              number3: number3,
+              'number-large': number_3_Large
+            }"
+          ></span>
+        </div>
+      </div>
+      <div class="successful-payment" *ngIf="successPayment">
+        <div class="responsiveContainer">
+          <p class="firstHead">Votre paiement de</p>
+          <p class="totalAmt">
+            <strong>{{ total }} </strong><small>XAF</small>
+          </p>
+          <p class="effectivePay">a &eacute;t&eacute; bien effectu&eacute;</p>
+          <p class="payment-date">Date de paiement : {{ transDate }}</p>
+          <!-- <div class="responsiveTime">
+             <p class="payment-date">Date de paiement : {{ Date }}</p>
+              <p class="payment-date">Date de paiement : {{ Time }}</p>
+          </div> -->
+          <p class="payment-id">
+            Transaction <span class="id">{{ transId }}</span>
+          </p>
+        </div>
+        <img
+          mat-card-image
+          class="successIcon"
+          src="assets/icons/tick.svg"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+  <div class="payment-button">
+    <button mat-raised-button class="card-btn next" (click)="next()">
+      {{ buttonState }}
+    </button>
+  </div>
+</div>

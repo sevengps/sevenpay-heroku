@@ -1,0 +1,420 @@
+$secondary: #94b30d;
+$primary: #0767b1;
+$default: #ffffff;
+$connectors: #bfbfbf;
+@import url("https://fonts.googleapis.com/css2?family=Rubik&family=Source+Sans+Pro:wght@400;600&display=swap");
+
+.transaction-container {
+  position: absolute;
+  bottom: 0;
+  right: -1px;
+  width: 100%;
+  height: 85%;
+  background-color: #ffffff;
+  opacity: 1;
+  -webkit-clip-path: polygon(35% 0, 100% 0%, 100% 100%, 15% 100%);
+  clip-path: polygon(35% 0, 100% 0%, 100% 100%, 15% 100%);
+}
+
+.elements-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  margin-left: 10rem;
+  position: relative;
+  top: -24px;
+}
+
+.stepper-container {
+  width: 86%;
+  position: relative;
+  top: 3.5rem;
+  left: 4rem;
+}
+.stepper-head {
+  width: 70%;
+  margin-left: 6rem;
+  display: flex;
+  justify-content: space-between;
+
+  .step-number {
+    padding: 0.5rem;
+    border-radius: 60%;
+    background-color: rgb(194, 187, 187);
+    color: $default;
+    margin-top: -1rem;
+    font-weight: bold;
+  }
+
+  .step-number-1 {
+    color: $default !important;
+    background-color: unset !important;
+    padding: 0 !important;
+  }
+  .step-number-1::before {
+    content: "1";
+    height: 24px;
+    width: 24px;
+    background-color: #bfbfbf;
+    border-radius: 100%;
+    position: relative;
+    left: 0px;
+    top: -12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+
+  .step-number-2::before {
+    content: "2";
+    height: 24px;
+    width: 24px;
+    background-color: #bfbfbf;
+    border-radius: 100%;
+    position: relative;
+    left: 0px;
+    top: -12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+
+  .step-number-3::before {
+    content: "3";
+    height: 24px;
+    width: 24px;
+    background-color: #bfbfbf;
+    border-radius: 100%;
+    position: relative;
+    left: 0px;
+    top: -12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+
+  // Step numbers
+  .number1::before {
+    background-color: $primary;
+  }
+  .number2::before {
+    background-color: $primary;
+  }
+  .number3::before {
+    background-color: $primary;
+  }
+
+  .number-large::before {
+    height: 31px;
+    width: 31px;
+    top: -15px;
+  }
+  .number-normal {
+    height: 26px;
+    width: 26px;
+    top: -12px;
+  }
+
+  // Step connectors
+  .step-connector {
+    width: 11rem;
+    height: 4px;
+    background-color: #b1aaaa;
+    position: relative;
+    top: -1px;
+  }
+  .connector1 {
+    background-color: $primary;
+  }
+  .connector2 {
+    background-color: $primary;
+  }
+}
+.responsiveContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  top: 3rem;
+
+  .totalAmt {
+    position: relative;
+    top: -62px;
+    left: 8.2rem;
+  }
+  .effectivePay {
+    position: relative;
+    top: -121px;
+    left: 16rem;
+  }
+}
+.payment-button {
+  // display: none;
+  width: 28rem;
+  position: absolute;
+  bottom: -25px;
+  right: 5%;
+  .card-btn {
+    background-color: $secondary;
+    height: 3rem;
+    width: 100%;
+    color: $default;
+
+    mat-progress-spinner {
+      margin: 0 auto;
+      color: $default;
+    }
+  }
+}
+
+.successful-payment {
+  position: relative;
+  left: 3rem;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #636363;
+  bottom: -2rem;
+  p {
+    strong,
+    small {
+      color: $primary;
+      font-family: "Source Sans Pro", sans-serif;
+    }
+    small {
+      font-size: 1.2rem;
+    }
+    strong {
+      font-size: 2rem;
+    }
+  }
+  p.payment-date {
+    position: relative;
+    left: 2rem;
+    top: -8rem;
+  }
+  p.payment-id {
+    position: relative;
+    top: -8.5rem;
+    left: 3rem;
+    span {
+      font-size: 1.3rem;
+      font-family: "Source Sans Pro", sans-serif;
+    }
+  }
+}
+
+.successIcon {
+  width: 29%;
+  height: 39%;
+  border-radius: 50%;
+  position: relative;
+  left: 9rem;
+  top: -5rem;
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 490px) {
+  .transaction-container {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 85%;
+    background-color: #ffffff;
+    opacity: 1;
+    -webkit-clip-path: polygon(35% 0, 100% 0%, 100% 100%, 15% 100%);
+    clip-path: polygon(0% 0, 100% 0%, 107% 100%, -4% 108%);
+    left: 0px;
+  }
+
+  .elements-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    top: -24px;
+    margin-left: 0rem;
+  }
+
+  .stepper-container {
+    width: 100%;
+    margin-top: 0rem;
+    margin-right: 0rem;
+    position: relative;
+    left: -32px;
+    top: 47px;
+  }
+
+  .payment-button {
+    width: 74%;
+    position: relative;
+    bottom: -516px;
+    margin: 0 auto;
+    right: 0%;
+  }
+  .successful-payment {
+    position: relative;
+    left: 0rem;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #636363;
+    /* bottom: -2rem; */
+    top: -60px;
+    p {
+      strong,
+      small {
+        color: $primary;
+        font-family: "Source Sans Pro", sans-serif;
+      }
+      small {
+        font-size: 1.2rem;
+      }
+      strong {
+        font-size: 2rem;
+      }
+    }
+    p.payment-date {
+      position: relative;
+      left: 0rem;
+      top: 0rem;
+      font-size: 1rem;
+      margin: auto;
+    }
+    p.payment-id {
+      position: relative;
+      top: 0rem;
+      left: 0rem;
+      margin: auto;
+      font-size: 1.5rem;
+      span {
+        font-size: 1.3rem;
+        font-family: "Source Sans Pro", sans-serif;
+      }
+    }
+  }
+
+  .responsiveContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    top: 5rem;
+    line-height: 1.7;
+    bottom: 0rem;
+
+    .firstHead {
+      margin: auto;
+      font-size: 1.5rem;
+    }
+
+    .totalAmt {
+      position: relative;
+      top: 0px;
+      left: 0rem;
+      margin: auto;
+    }
+    .effectivePay {
+      position: relative;
+      top: 0px;
+      left: 0rem;
+      margin: auto;
+      font-size: 1.5rem;
+    }
+  }
+
+  .successIcon {
+    width: 37%;
+    border-radius: 50%;
+    position: relative;
+    left: 6.5rem;
+    top: 7rem;
+  }
+}
+
+// @media screen and (max-width: 375px) {
+//   .stepper-container {
+//     width: 100%;
+//     position: relative;
+//     margin: auto;
+//     align-self: center;
+//     left: -43px;
+//     top: 20px;
+//   }
+
+//   .total-container-responsive {
+//     display: block;
+//     position: relative;
+//     left: 12px;
+//     top: 40px;
+//     margin: auto;
+//     .total {
+//       color: #636363;
+//       font-family: "Rubik", sans-serif;
+//       font-size: 1.8rem;
+//       position: relative;
+//       left: 53px;
+//     }
+//     .amount {
+//       color: #94b30d;
+//       font-size: 3rem;
+//       position: relative;
+//       left: -12px;
+//       top: 8px;
+//     }
+//     .currency {
+//       color: #94b30d;
+//       position: relative;
+//       font-size: 1.6rem;
+//       left: -4px;
+//       top: 5px;
+//     }
+//   }
+
+//   .momoPay {
+//     width: 50%;
+//     margin-top: 0rem;
+//     margin-left: 0rem;
+//     margin-bottom: 0rem;
+//     form {
+//       width: 96%;
+//       margin-bottom: 7rem;
+//       margin-left: -1rem;
+//       margin-top: -3rem;
+//       mat-form-field {
+//         width: 147%;
+//         position: relative;
+//         left: -22px;
+//         bottom: -86px;
+//       }
+//       p {
+//         width: 154%;
+//         position: relative;
+//         top: 90px;
+//         line-height: 1.4;
+//         left: -18px;
+//       }
+//       img {
+//         margin-bottom: 0rem;
+//         margin-top: 0rem;
+//         margin-left: 0rem;
+//         display: none;
+//       }
+//     }
+//   }
+
+//   .payment-button {
+//     width: 74%;
+//     position: relative;
+//     bottom: -459px;
+//     margin: 0 auto;
+//     right: 0%;
+//   }
+// }

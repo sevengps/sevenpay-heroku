@@ -1,0 +1,20 @@
+<div class="container-head">
+  <mat-icon
+    class="back"
+    *ngIf="paymentHeader != 'Paiement Effectué'"
+    (click)="gotoPrevious()"
+    [ngClass]="{
+      paymentModeIcon: paymentHeader === 'Details de paiement'
+    }"
+    >keyboard_arrow_left</mat-icon
+  >
+  <span
+    class="Not-responsive"
+    [ngClass]="{
+      paymentSuccess: paymentHeader === 'Paiement Effectué',
+      paymentModeSpan: paymentHeader === 'Details de paiement'
+    }"
+    >{{ paymentHeader }}</span
+  >
+  <span class="responsive">{{ paymentHeaderResponsive }}</span>
+</div>

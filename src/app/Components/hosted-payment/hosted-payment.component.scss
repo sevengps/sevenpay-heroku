@@ -1,0 +1,184 @@
+$secondary: #94b30d;
+$primary: #0767b1;
+$default: #ffffff;
+@import url("https://fonts.googleapis.com/css2?family=Rubik&family=Source+Sans+Pro:wght@400;600&display=swap");
+
+.primary {
+  background-color: $primary;
+}
+.accent {
+  background-color: $secondary;
+}
+
+.option {
+  display: flex;
+}
+.companyHead {
+  margin-bottom: 0.92rem;
+}
+.mat-h2 {
+  color: #169488;
+}
+.main-container {
+  background: #f2f4f8;
+  opacity: 1;
+  margin-top: 7.5%;
+}
+
+.payment-container {
+  position: relative;
+  width: 850px;
+  height: 520px;
+  margin: 0 auto;
+  background: #0061a9;
+  box-shadow: 0px 3px 6px 0px #00000029;
+  opacity: 1;
+}
+
+.mobilePhone-Container {
+  margin-top: 2rem;
+  margin-left: -3.6rem;
+
+  img {
+    height: 15%;
+    width: 20%;
+  }
+}
+
+.creditCard-Container {
+  margin-top: 6rem;
+  margin-left: -1rem;
+  position: absolute;
+  z-index: 1;
+
+  img {
+    height: 28%;
+    width: 69%;
+    z-index: 99;
+  }
+}
+
+.branding-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  .branding-logo {
+    height: 26px;
+  }
+  .branding-text {
+    height: 19px;
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+    letter-spacing: 0px;
+    color: #636363;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .payment-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background: #0061a9;
+    box-shadow: 0px 0px 0px 0px $default;
+    opacity: 1;
+  }
+  .main-container {
+    margin-top: 0%;
+  }
+  .companyHead {
+    display: none;
+  }
+  .boder-bottom {
+    display: none;
+  }
+
+  .branding-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 6rem;
+  }
+
+  .mobilePhone-Container {
+    display: none;
+  }
+
+  .creditCard-Container {
+    display: none;
+  }
+}
+
+select {
+  width: 70px;
+  height: 20px;
+}
+
+.language-container-english {
+  background-color: white;
+  padding: 3px;
+  position: relative;
+  top: 3px;
+  right: -8.5rem;
+
+  img {
+    margin-bottom: -5px;
+    height: 13.5px;
+    width: 20px;
+    padding: 3px;
+  }
+
+  select {
+    border: none;
+    background: white;
+  }
+}
+
+.language-container-french {
+  display: none;
+  background-color: white;
+  padding: 3px;
+  position: relative;
+  right: 10.5rem;
+  top: 26px;
+  right: -35px;
+  img {
+    margin-bottom: -5px;
+    height: 13.5px;
+    width: 20px;
+    padding: 3px;
+  }
+
+  select {
+    border: none;
+    background: white;
+  }
+}
+
+.language-container-english,
+select,
+option:hover {
+  cursor: pointer;
+}
+
+.language-container-french,
+select,
+option:hover {
+  cursor: pointer;
+}
+
+.showElement {
+  display: inline-block;
+}
+
+@media screen and (max-width: 375px) {
+  .branding-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5.59rem;
+  }
+}

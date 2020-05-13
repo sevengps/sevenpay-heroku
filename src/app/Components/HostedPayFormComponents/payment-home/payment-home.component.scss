@@ -1,0 +1,471 @@
+$secondary: #94b30d;
+$primary: #0767b1;
+$default: #ffffff;
+$connectors: #bfbfbf;
+@import url("https://fonts.googleapis.com/css2?family=Rubik&family=Source+Sans+Pro:wght@400;600&display=swap");
+
+.transaction-container {
+  position: absolute;
+  bottom: 0;
+  right: -1px;
+  width: 100%;
+  height: 85%;
+  background-color: #ffffff;
+  opacity: 1;
+  -webkit-clip-path: polygon(35% 0, 100% 0%, 100% 100%, 15% 100%);
+  clip-path: polygon(35% 0, 100% 0%, 100% 100%, 15% 100%);
+}
+
+.elements-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  margin-left: 10rem;
+  position: relative;
+  top: -24px;
+}
+
+.stepper-container {
+  width: 88%;
+  margin-top: -2.6rem;
+  margin-right: -9rem;
+}
+.stepper-head {
+  width: 70%;
+  margin-left: 6rem;
+  display: flex;
+  justify-content: space-between;
+
+  .step-number {
+    padding: 0.5rem;
+    border-radius: 60%;
+    background-color: rgb(194, 187, 187);
+    color: $default;
+    margin-top: -1rem;
+    font-weight: bold;
+  }
+
+  .step-number-1 {
+    color: $default !important;
+    background-color: unset !important;
+    padding: 0 !important;
+  }
+  .step-number-1::before {
+    content: "1";
+    height: 24px;
+    width: 24px;
+    background-color: #bfbfbf;
+    border-radius: 100%;
+    position: relative;
+    left: 0px;
+    top: -12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+
+  .step-number-2::before {
+    content: "2";
+    height: 24px;
+    width: 24px;
+    background-color: #bfbfbf;
+    border-radius: 100%;
+    position: relative;
+    left: 0px;
+    top: -12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+
+  .step-number-3::before {
+    content: "3";
+    height: 24px;
+    width: 24px;
+    background-color: #bfbfbf;
+    border-radius: 100%;
+    position: relative;
+    left: 0px;
+    top: -12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+
+  // Step numbers
+  .number1::before {
+    background-color: $primary;
+  }
+  .number2::before {
+    background-color: $primary;
+  }
+  .number3::before {
+    background-color: $primary;
+  }
+
+  .number-large::before {
+    height: 31px;
+    width: 31px;
+    top: -15px;
+  }
+  .number-normal {
+    height: 26px;
+    width: 26px;
+    top: -12px;
+  }
+
+  // Step connectors
+  .step-connector {
+    width: 11rem;
+    height: 4px;
+    background-color: #b1aaaa;
+    position: relative;
+    top: -1px;
+  }
+  .connector1 {
+    background-color: $primary;
+  }
+  .connector2 {
+    background-color: $primary;
+  }
+}
+
+/* STEP 2*/
+.momoPay {
+  width: 29rem;
+  margin-top: -0.3rem;
+  margin-left: 1rem;
+  form {
+    width: 100%;
+    margin-bottom: 7rem;
+    margin-left: -1rem;
+    margin-top: -3rem;
+    mat-form-field {
+      width: 100%;
+    }
+    span {
+      width: 95%;
+    }
+  }
+}
+
+.visaCardPay-waiting {
+  border: 1px solid #707070;
+  padding: 1px;
+  opacity: 0.3;
+}
+
+.momopay-waiting {
+  border: 1px solid #707070;
+  padding: 1px;
+  opacity: 0.3;
+}
+
+.showStripeCard {
+  display: none;
+}
+
+// fix stepper when visa card is selected
+.fixStepper {
+  margin-top: -3rem;
+}
+
+.fixSuccessStepper {
+  margin-top: 3rem;
+}
+
+/** FIXED CARD ELEMENTS*/
+.fixCardElements {
+  margin-left: 4rem;
+  .payment-card {
+    margin-bottom: -4rem;
+    margin-top: -4rem;
+  }
+  .card-expiration-cvc-container mat-form-field {
+    width: 46%;
+    margin-bottom: 1rem;
+  }
+  .form-spacer {
+    margin-right: 2.3rem;
+  }
+
+  .cardOwner {
+    margin-bottom: 1.5rem;
+  }
+
+  .cardNumber {
+    margin-bottom: 1.5rem;
+  }
+}
+
+// attach for step3
+.fixStepperForStep3 {
+  margin-top: 5rem;
+}
+.successful-payment {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #636363;
+  span {
+    strong,
+    small {
+      color: $primary;
+      font-family: "Source Sans Pro", sans-serif;
+    }
+    small {
+      font-size: 1.2rem;
+    }
+    strong {
+      font-size: 2rem;
+    }
+  }
+  p.payment-date {
+    margin-left: 3rem;
+  }
+  p.payment-id {
+    margin-left: 5.5rem;
+    margin-bottom: 2rem;
+    span {
+      font-size: 1.3rem;
+      font-family: "Source Sans Pro", sans-serif;
+    }
+  }
+}
+
+.successIcon {
+  width: 35%;
+  height: 25%;
+  border-radius: 50%;
+  margin-left: 6.5rem;
+}
+
+.payment-button {
+  // display: none;
+  width: 28rem;
+  position: absolute;
+  bottom: -25px;
+  right: 5%;
+  .card-btn {
+    background-color: $secondary;
+    height: 3rem;
+    width: 100%;
+    color: $default;
+
+    mat-progress-spinner {
+      margin: 0 auto;
+      color: $default;
+    }
+  }
+}
+
+.paymentStep-1 {
+  width: 100%;
+  margin-right: 10.5rem;
+  margin-top: 3rem;
+}
+
+.select-form {
+  width: 63%;
+  margin-right: -12rem;
+  margin-left: 18rem;
+  margin-top: -6rem;
+}
+
+mat-option img {
+  margin-bottom: -0.5rem;
+}
+
+.total-container {
+  margin-top: -13.5rem;
+  margin-left: 23.5rem;
+  margin-right: -11rem;
+  margin-bottom: 5.7rem;
+  .total {
+    color: #636363;
+    font-family: "Rubik", sans-serif;
+    font-size: 1.8rem;
+  }
+  .amount {
+    color: $secondary;
+    font-size: 2.2rem;
+  }
+  .currency {
+    color: $secondary;
+    margin-left: 0.3rem;
+  }
+}
+
+.total-container-responsive {
+  display: none;
+}
+
+.selectedIcon {
+  width: 50px;
+  height: auto;
+  position: relative;
+  top: 8px;
+}
+.allIcons {
+  width: 40px;
+  height: auto;
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 768px) {
+  .transaction-container {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 85%;
+    background-color: #ffffff;
+    opacity: 1;
+    -webkit-clip-path: polygon(35% 0, 100% 0%, 100% 100%, 15% 100%);
+    clip-path: polygon(0% 0, 100% 0%, 107% 100%, -4% 108%);
+    left: 0px;
+  }
+
+  .elements-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    top: -24px;
+    margin-left: 0rem;
+  }
+
+  .stepper-container {
+    width: 100%;
+    margin-top: 0rem;
+    margin-right: 0rem;
+    position: relative;
+    left: -30px;
+    top: 18px;
+  }
+
+  .payment-button {
+    width: 74%;
+    position: relative;
+    bottom: -411px;
+    margin: 0 auto;
+    right: 0%;
+  }
+  .paymentStep-1 {
+    width: 60%;
+    margin-right: 0rem !important;
+    margin-top: 3rem;
+  }
+
+  .total-container {
+    display: none;
+  }
+
+  .total-container-responsive {
+    display: block;
+    position: relative;
+    left: 48px;
+    top: -97px;
+    margin: auto;
+    .total {
+      color: #636363;
+      font-family: "Rubik", sans-serif;
+      font-size: 1.8rem;
+      position: relative;
+      left: 53px;
+    }
+    .amount {
+      color: #94b30d;
+      font-size: 3rem;
+      position: relative;
+      left: -12px;
+      top: 8px;
+    }
+    .currency {
+      color: #94b30d;
+      position: relative;
+      font-size: 1.6rem;
+      left: -4px;
+      top: 5px;
+    }
+  }
+
+  .select-form {
+    width: 119%;
+    margin-right: 0rem;
+    margin-left: 0rem;
+    margin-top: -6rem;
+    position: relative;
+    left: -23px;
+  }
+
+  .stepper-head .number-large::before {
+    height: 40px;
+    width: 40px;
+    top: -20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .stepper-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+    align-self: center;
+    left: -43px;
+    top: -33px;
+  }
+
+  .total-container-responsive {
+    display: block;
+    position: relative;
+    left: 18px;
+    top: -141px;
+    margin: auto;
+    .total {
+      color: #636363;
+      font-family: "Rubik", sans-serif;
+      font-size: 1.8rem;
+      position: relative;
+      left: 53px;
+    }
+    .amount {
+      color: #94b30d;
+      font-size: 3rem;
+      position: relative;
+      left: -12px;
+      top: 8px;
+    }
+    .currency {
+      color: #94b30d;
+      position: relative;
+      font-size: 1.6rem;
+      left: -4px;
+      top: 5px;
+    }
+  }
+  .payment-button {
+    width: 74%;
+    position: relative;
+    bottom: -393px;
+    margin: 0 auto;
+    right: 0%;
+  }
+  .select-form {
+    width: 119%;
+    margin-right: 0rem;
+    margin-left: 0rem;
+    position: relative;
+    margin: auto;
+    left: -20px;
+    bottom: 78px;
+  }
+}

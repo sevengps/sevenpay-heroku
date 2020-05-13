@@ -1,0 +1,54 @@
+<div class="companyHead">
+  <img src="assets/icons/SevenPaylogosmall.png" alt="7 pay Logo" />
+  <p class="mat-h2">SevenPay Hosted Payment</p>
+  <div class="language-container-english">
+    <img src="assets/icons/engFlag.png" alt="flag" />
+    <select id="language" disabled>
+      <option>EN</option>
+    </select>
+  </div>
+  <div class="language-container-french">
+    <img src="assets/icons/frenchFlag.png" alt="flag" />
+    <select id="language" disabled>
+      <option>FR</option>
+    </select>
+  </div>
+</div>
+<div class="boder-bottom"></div>
+<div class="main-container">
+  <div class="payment-container">
+    <app-head
+      [paymentHeader]="paymentHeader"
+      [paymentHeaderResponsive]="paymentHeaderResponsive"
+    ></app-head>
+
+    <!-- body -->
+    <router-outlet
+      (activate)="getActivatedComponentDetails($event)"
+    ></router-outlet>
+
+    <!-- side icons for card and phone -->
+    <div
+      *ngIf="currentRoute === 'momopay' && openStep2"
+      class="mobilePhone-Container"
+    >
+      <img src="assets/icons/Phoneeneo@2x.png" alt="" />
+    </div>
+    <div
+      *ngIf="currentRoute === 'visapay' && openStep2"
+      class="creditCard-Container"
+    >
+      <img src="assets/icons/creditCard.png" alt="" />
+    </div>
+  </div>
+
+  <!-- branding -->
+  <div class="branding-container">
+    <span class="branding-text">Powered By &nbsp;</span>
+    <img
+      src="assets/icons/SevenPaylogosmall.png"
+      class="branding-logo"
+      alt=""
+    />
+  </div>
+</div>

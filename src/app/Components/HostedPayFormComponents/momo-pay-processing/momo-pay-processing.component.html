@@ -1,0 +1,79 @@
+<div class="">
+  <div class="transaction-container">
+    <div class="elements-container">
+      <div
+        class="stepper-container"
+        [ngClass]="{ fixStepper: selectedGateway === 'visaCard' && openStep2 }"
+        [ngClass]="{ fixSuccessStepper: openStep3 }"
+      >
+        <div class="stepper-head">
+          <span
+            class="step-number-1"
+            [ngClass]="{
+              number1: number1,
+              'number-large': number_1_Large
+            }"
+          >
+          </span>
+          <span
+            class="step-connector connector1"
+            [ngClass]="{ connector1: connector1 }"
+          ></span>
+          <span
+            class="step-number-2 number2"
+            [ngClass]="{
+              number2: number2,
+              'number-large': number_2_Large
+            }"
+          ></span>
+          <span
+            class="step-connector connector2"
+            [ngClass]="{ connector2: connector2 }"
+          ></span>
+          <span
+            class="step-number-3 number3"
+            [ngClass]="{
+              number3: number3,
+              'number-large': number_3_Large
+            }"
+          ></span>
+        </div>
+      </div>
+      <div class="momoPay momopay-waiting">
+        <form>
+          <div class="total-container-responsive">
+            <span class="total">Total:&nbsp;</span><br />
+            <span class="amount">{{ total }}</span>
+            <span class="currency">XAF</span>
+          </div>
+
+          <mat-form-field class="momoPaymentForm">
+            <mat-label>Entrez le numéro de téléphone</mat-label>
+            <input
+              matInput
+              type="number"
+              readonly
+              onkeydown="javascript: return event.keyCode === 8 ||
+        event.keyCode === 46 ? true : !isNaN(Number(event.key))"
+            />
+          </mat-form-field>
+
+          <p class="privacy">
+            Vos informations personnelles ne seront utilisées à d'autres fins,
+            vous pouvez lire notre
+            <a href="#">politique de confidentialité</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="payment-button">
+    <button mat-raised-button class="card-btn next" (click)="next()">
+      <mat-progress-spinner
+        [diameter]="35"
+        mode="indeterminate"
+        color="warn"
+      ></mat-progress-spinner>
+    </button>
+  </div>
+</div>
